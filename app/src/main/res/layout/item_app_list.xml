@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.kodmap.deeplinktester.ui.main.appList.AppListItemViewModel"/>
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?selectableItemBackground"
+        android:onClick="@{() -> viewModel.onClick()}"
+        android:background="@drawable/bg_item"
+        android:padding="16dp">
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/app_count"
+            android:textSize="18sp"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/primary_text_color"
+            android:fontFamily="@font/raleway_regular"
+            android:text="@{viewModel.appItem.get().app.name}"/>
+
+        <TextView
+            android:id="@+id/app_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/secondary_text_color"
+            android:text="@{viewModel.appItem.get().getDeeplinkSize()}"/>
+    </RelativeLayout>
+</layout>

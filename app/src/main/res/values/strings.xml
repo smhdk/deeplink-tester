@@ -1,0 +1,20 @@
+<resources>
+    <string name="app">Deeplink Tester</string>
+    <string name="app_name">App Name</string>
+    <string name="position" translatable="false">position</string>
+    <string name="title">Title</string>
+    <string name="empty_deeplink_list">Please click + for add new deeplink</string>
+    <string name="empty_app_list">Please click + for add new app</string>
+    <string name="add_app">Add App</string>
+    <string name="write_app_name">Write app name</string>
+    <string name="write_deeplink">Write deeplink</string>
+    <string name="write_app_name_error">App name not be empty</string>
+    <string name="add_deeplink">Add Deeplink</string>
+    <string name="intent_sent">Intent sent</string>
+    <string name="add">Add</string>
+    <string name="cancel">Cancel</string>
+    <string name="write_deeplink_error">Link cannot be empty</string>
+    <string name="save">Save</string>
+    <string name="rename">Rename</string>
+    <string name="not_found_activity">Not found activity for this link</string>
+</resources>

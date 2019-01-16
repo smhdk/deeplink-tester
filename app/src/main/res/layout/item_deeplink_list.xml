@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.kodmap.deeplinktester.ui.deeplink.deeplinkList.DeeplinkListItemViewModel"/>
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_item"
+        android:padding="16dp"
+        android:foreground="?selectableItemBackground"
+        android:onLongClick="@{() -> viewModel.onLongClick()}"
+        android:onClick="@{() -> viewModel.onClick()}">
+        <TextView
+            android:id="@+id/deeplink_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:textColor="@color/primary_text_color"
+            android:fontFamily="@font/raleway_regular"
+            android:text="@{viewModel.item.get().link}"/>
+
+    </RelativeLayout>
+</layout>

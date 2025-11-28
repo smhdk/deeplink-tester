@@ -23,14 +23,6 @@
 .idea/**/gradle.xml
 .idea/**/libraries
 
-# Gradle and Maven with auto-import
-# When using Gradle or Maven with auto-import, you should exclude module files,
-# since they will be recreated, and may cause churn.  Uncomment if using
-# auto-import.
-# .idea/modules.xml
-# .idea/*.iml
-# .idea/modules
-
 # CMake
 cmake-build-*/
 
@@ -60,6 +52,7 @@ fabric.properties
 
 # Editor-based Rest Client
 .idea/httpRequests
+
 ### Android template
 # Built application files
 *.apk
@@ -105,7 +98,6 @@ captures/
 .idea/caches
 
 # Keystore files
-# Uncomment the following line if you do not want to check your keystore files in.
 #*.jks
 
 # External native build folder generated in Android Studio 2.2 and later
@@ -124,29 +116,18 @@ fastlane/test_output
 fastlane/readme.md
 
 .idea/sonarlint/
-app/build/generated/res/
-app/build/generated/source/apt/
-app/build/generated/source/kaptKotlin/
-app/build/generated/source/rs/
-app/build/intermediates/check-libraries/
-app/build/intermediates/check-manifest/
-app/build/intermediates/checkDebugClasspath/
-app/build/intermediates/incremental/processDebugResources/
-app/build/intermediates/incremental/validateSigningDebug/
-app/build/intermediates/jniLibs/
-app/build/intermediates/merged_assets/
-app/build/intermediates/prebuild/
-app/build/intermediates/rs/
-app/build/intermediates/shader_assets/
-app/build/intermediates/shaders/
-app/build/intermediates/transforms/dexBuilder/debug/90/
-app/build/tmp/compileDebugJavaWithJavac/
-app/build/tmp/kapt3/classes/
-app/build/tmp/kapt3/incrementalData/debugAndroidTest/
-app/build/tmp/kapt3/incrementalData/debugUnitTest/
-app/build/tmp/kapt3/incrementalData/release/
-app/build/tmp/kapt3/incrementalData/releaseUnitTest/
-app/build/tmp/kapt3/stubs/debugAndroidTest/
-app/build/tmp/kapt3/stubs/debugUnitTest/
-app/build/tmp/kapt3/stubs/release/
-app/build/tmp/kapt3/stubs/releaseUnitTest/
+
+# Kotlin Multiplatform
+*.xcworkspace
+*.xcuserdata
+xcuserdata/
+DerivedData/
+Pods/
+Podfile.lock
+
+# iOS
+iosApp/iosApp.xcodeproj/
+iosApp/iosApp.xcworkspace/
+
+# Compose Multiplatform
+kotlin-js-store/

@@ -25,6 +25,6 @@ fun initKoin() {
 private fun openDeeplink(link: String) {
     val url = NSURL.URLWithString(link) ?: return
     if (UIApplication.sharedApplication.canOpenURL(url)) {
-        UIApplication.sharedApplication.openURL(url)
+        UIApplication.sharedApplication.openURL(url, emptyMap<Any?, Any?>()) { _ -> }
     }
 }

@@ -6,7 +6,9 @@ import com.kodmap.deeplinktester.data.AppDatabase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.IO
 import org.koin.dsl.module
-import platform.Foundation.NSHomeDirectory
+import platform.Foundation.NSDocumentDirectory
+import platform.Foundation.NSFileManager
+import platform.Foundation.NSUserDomainMask
 
 actual val platformModule = module {
     single { createDatabase() }
@@ -15,7 +17,14 @@ actual val platformModule = module {
 }
 
 private fun createDatabase(): AppDatabase {
-    val dbFilePath = NSHomeDirectory() + "/Documents/$DB_NAME"
+    val documentDirectory = NSFileManager.defaultManager.URLForDirectory(
+        directory = NSDocumentDirectory,
+        inDomain = NSUserDomainMask,
+        appropriateForURL = null,
+        create = false,
+        error = null
+    )
+    val dbFilePath = requireNotNull(documentDirectory?.path) + "/$DB_NAME"
     return Room.databaseBuilder<AppDatabase>(
         name = dbFilePath
     )
